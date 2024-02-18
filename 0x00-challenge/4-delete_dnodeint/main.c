@@ -4,40 +4,66 @@
 #include "lists.h"
 
 /**
- * main - Test program for doubly linked list functions.
+ * main - check the code for Holberton School students.
  *
  * Return: Always EXIT_SUCCESS.
  */
 int main(void)
 {
-    dlistint_t *head = NULL;
-    int values[] = {0, 1, 2, 3, 4, 98, 402, 1024};
-    size_t num_values = sizeof(values) / sizeof(values[0]);
-    size_t i;
+	dlistint_t *head;
 
-    for (i = 0; i < num_values; i++) {
-        if (add_dnodeint_end(&head, values[i]) == NULL) {
-            fprintf(stderr, "Failed to add node with value %d\n", values[i]);
-            free_dlistint(head);
-            return EXIT_FAILURE;
-        }
-    }
-
-    printf("Original list:\n");
-    print_dlistint(head);
-    printf("-----------------\n");
-
-    if (delete_dnodeint_at_index(&head, 5) == -1) {
-        fprintf(stderr, "Failed to delete node at index 5\n");
-        free_dlistint(head);
-        return EXIT_FAILURE;
-    }
-    printf("List after deleting node at index 5:\n");
-    print_dlistint(head);
-    printf("-----------------\n");
-
-
-    free_dlistint(head);
-
-    return EXIT_SUCCESS;
+	head = NULL;
+	add_dnodeint_end(&head, 0);
+	add_dnodeint_end(&head, 1);
+	add_dnodeint_end(&head, 2);
+	add_dnodeint_end(&head, 3);
+	add_dnodeint_end(&head, 4);
+	add_dnodeint_end(&head, 98);
+	add_dnodeint_end(&head, 402);
+	add_dnodeint_end(&head, 1024);
+	print_dlistint(head);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 5);
+	print_dlistint(head);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	print_dlistint(head);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	print_dlistint(head);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	print_dlistint(head);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	print_dlistint(head);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	print_dlistint(head);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	print_dlistint(head);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	print_dlistint(head);
+	free_dlistint(head);
+	return (0);
 }
